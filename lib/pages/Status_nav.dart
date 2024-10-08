@@ -41,7 +41,7 @@ class _StatusNavState extends State<StatusNav> {
                     const Text(
                       "Nome da Nave",
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 15,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -58,9 +58,9 @@ class _StatusNavState extends State<StatusNav> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Text(
-                      "Quantidade de Suprimentos",
+                      "Quantidade de Suprimentos:",
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 15,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -77,7 +77,7 @@ class _StatusNavState extends State<StatusNav> {
                 const Text(
                   "Participantes",
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 15,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

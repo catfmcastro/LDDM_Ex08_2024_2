@@ -21,7 +21,7 @@ class ControllerPage extends StatefulWidget {
 
 class _ControllerPageState extends State<ControllerPage> {
   int _actualPage = 0;
-  
+
   String? shipName;
   double? valueSuply;
   List<String> tripulants = [];
@@ -50,7 +50,6 @@ class _ControllerPageState extends State<ControllerPage> {
     });
   }
 
-
   void _updateIndex(int index) {
     setState(() {
       _actualPage = index;
@@ -61,24 +60,31 @@ class _ControllerPageState extends State<ControllerPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Missão Espacial - Tupac11"),
+        title: const Text("Missão Espacial - Tupac11",
+            style: TextStyle(color: Colors.white)),
         centerTitle: true,
+        backgroundColor: Colors.purple[700],
       ),
       body: IndexedStack(
         index: _actualPage,
         children: [
           HomeNav(onSave: _saveShipName),
-          TripulationNav(onCheckboxChanged: _addTripulant, onRemoveTripulant: _removeTripulant),
+          TripulationNav(
+              onCheckboxChanged: _addTripulant,
+              onRemoveTripulant: _removeTripulant),
           SuplyNav(saveValue: _saveSuply),
-          StatusNav(shipName: shipName, valueSuply: valueSuply, tripulants: tripulants),
+          StatusNav(
+              shipName: shipName,
+              valueSuply: valueSuply,
+              tripulants: tripulants),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: _actualPage,
           onTap: _updateIndex,
-          fixedColor: Colors.blue,
+          fixedColor: Colors.yellow[700],
           backgroundColor: Colors.black,
-          unselectedItemColor: Colors.green,
+          unselectedItemColor: Colors.purple[700],
           showUnselectedLabels: true,
           items: const [
             BottomNavigationBarItem(
