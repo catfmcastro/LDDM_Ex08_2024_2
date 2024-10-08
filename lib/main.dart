@@ -33,6 +33,12 @@ class _ControllerPageState extends State<ControllerPage> {
     });
   }
 
+  void _removeTripulant(String name) {
+    setState(() {
+      tripulants.remove(name); // Remove o nome da lista
+    });
+  }
+
   void _saveShipName(String name) {
     setState(() {
       shipName = name;
@@ -63,9 +69,9 @@ class _ControllerPageState extends State<ControllerPage> {
         index: _actualPage,
         children: [
           HomeNav(onSave: _saveShipName),
-          const TripulationNav(),
-          const SuplyNav(),
-          const StatusNav(),
+          TripulationNav(onCheckboxChanged: _addTripulant, onRemoveTripulant: _removeTripulant),
+          SuplyNav(),
+          StatusNav(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
