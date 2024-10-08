@@ -1,9 +1,10 @@
+import 'package:ex8/bottomBar.dart';
 import 'package:flutter/material.dart';
 
 class Page1 extends StatefulWidget {
   const Page1({super.key});
 
-  @override
+  @override 
   _Page1State createState() => _Page1State();
 }
 
@@ -21,12 +22,15 @@ class _Page1State extends State<Page1> {
               'Nomeie sua Nave',
               style: TextStyle(fontSize: 24),
             ),
-            const TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Nome da nave',
+            const SizedBox(
+              width: 400,
+              child: TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Nome da nave',
+                ),
+                maxLength: 50,
               ),
-              maxLength: 50,
             ),
             ElevatedButton(
               onPressed: () {
@@ -37,6 +41,7 @@ class _Page1State extends State<Page1> {
           ],
         ),
       ),
+      bottomNavigationBar: BottomBar(),
     );
   }
 }
