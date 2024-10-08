@@ -71,7 +71,7 @@ class _ControllerPageState extends State<ControllerPage> {
           HomeNav(onSave: _saveShipName),
           TripulationNav(onCheckboxChanged: _addTripulant, onRemoveTripulant: _removeTripulant),
           SuplyNav(saveValue: _saveSuply),
-          StatusNav(),
+          StatusNav(shipName: shipName, valueSuply: valueSuply, tripulants: tripulants),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

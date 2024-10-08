@@ -56,7 +56,7 @@ class _TripulationNavState extends State<TripulationNav> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Expanded(
+      body: Expanded( // Eu acho que o Expanded não deixa eu centralizar usando a Column, mas eu não testei
         child: ListView.builder(
           padding: const EdgeInsets.symmetric(vertical: 10),
           itemCount: names.length,

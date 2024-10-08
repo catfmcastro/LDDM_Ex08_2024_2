@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SuplyNav extends StatefulWidget {
-
+  
   final Function(double) saveValue;
   const SuplyNav({super.key, required this.saveValue});
 
