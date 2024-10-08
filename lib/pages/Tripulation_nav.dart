@@ -4,7 +4,7 @@ class TripulationNav extends StatefulWidget {
   final Function(String name)? onCheckboxChanged; // Callback para o nome
   final Function(String name)? onRemoveTripulant; // Callback para o nome
 
-  const TripulationNav({super.key, this.onCheckboxChanged, this.onRemoveTripulant});
+  const TripulationNav({super.key, required this.onCheckboxChanged, required this.onRemoveTripulant});
 
   @override
   State<TripulationNav> createState() => _TripulationNavState();

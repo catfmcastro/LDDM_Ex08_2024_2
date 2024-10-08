@@ -24,7 +24,7 @@ class _ControllerPageState extends State<ControllerPage> {
   int _actualPage = 0;
   
   String? shipName;
-  int? valueSuply;
+  double? valueSuply;
   List<String> tripulants = [];
 
   void _addTripulant(String name) {
@@ -45,7 +45,7 @@ class _ControllerPageState extends State<ControllerPage> {
     });
   }
 
-  void _saveSuply(int value) {
+  void _saveSuply(double value) {
     setState(() {
       valueSuply = value;
     });
@@ -70,7 +70,7 @@ class _ControllerPageState extends State<ControllerPage> {
         children: [
           HomeNav(onSave: _saveShipName),
           TripulationNav(onCheckboxChanged: _addTripulant, onRemoveTripulant: _removeTripulant),
-          SuplyNav(),
+          SuplyNav(saveValue: _saveSuply),
           StatusNav(),
         ],
       ),
